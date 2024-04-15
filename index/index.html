@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+
+
+
+  <!-- <section> -->
+    <!-- <ul class="navbars">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+      <h2>Fixed Full-height Side Nav</h2>
+      <h3>Try to scroll this area, and see how the sidenav sticks to the page</h3>
+      <p>Notice that this div element has a left margin of 25%. This is because the side navigation is set to 25% width. If you remove the margin, the sidenav will overlay/sit on top of this div.</p>
+      <p>Also notice that we have set overflow:auto to sidenav. This will add a scrollbar when the sidenav is too long (for example if it has over 50 links inside of it).</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+      <p>Some text..</p>
+    </div> -->
+    
+
+
+  
+      <ul class="top">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      
+      <div style="padding:20px;margin-top:30px;background-color:#1abc9c;height:1200px;">
+        <h1>Fixed Top Navigation Bar</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+      
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+        <p>Some text some text some text some text..</p>
+      
+      </div>
+    
+
+
+
+      <section>
+        <ul class="bottom">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        
+        <div style="padding:20px;background-color:#bc961a;height:1200px;">
+          <h1>Fixed Bottom Navigation Bar</h1>
+          <h2>Scroll this page to see the effect</h2>
+          <h2>The navigation bar will stay at the bottom of the page while scrolling</h2>
+        
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+          <p>Some text some text some text some text..</p>
+        </div>
+        
+      </section> 
+
+
+    <h2>Center Align Elements</h2>
+<p>To horizontally center a block element (like div), use margin: auto;</p>
+
+<div class="center">
+  <p>Hello World!</p>
+</div>
+
+<!--Monday-->
+<h2>Descendant Selector (space)</h2>
+
+<p>The descendant selector matches all elements that are descendants of a specified element.</p>
+
+<div class="fr">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section><p>Paragraph 3 in the div.</p></section>
+</div>
+
+<p>Paragraph 4. Not in a div.</p>
+<p>Paragraph 5. Not in a div.</p>
+
+<h2>Child Selector > </h2>
+
+<p>The child selector (>) selects all elements that are the children of a specified element.</p>
+
+<div class="red">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+  <section>
+    <!-- not Child but Descendant -->
+    <p>Paragraph 3 in the div (inside a section element).</p>
+  </section>
+  <p>Paragraph 4 in the div.</p>
+</div>
+
+<p>Paragraph 5. Not in a div.</p>
+<p>Paragraph 6. Not in a div.</p>
+
+<h2>Adjacent Sibling Selector + </h2>
+
+<p>The + selector is used to select an element that is directly after another specific element.</p>
+<p>The following example selects the first p element that are placed immediately after div elements:</p>
+
+<div class="hr">
+  <p>Paragraph 1 in the div.</p>
+  <p>Paragraph 2 in the div.</p>
+</div>
+
+<p>Paragraph 3. After a div.</p>
+<p>Paragraph 4. After a div.</p>
+
+<div>
+  <p>Paragraph 5 in the div.</p>
+  <p>Paragraph 6 in the div.</p>
+</div>
+
+<p>Paragraph 7. After a div.</p>
+<p>Paragraph 8. After a div.</p>
+
+
+<h2>General Sibling Selector ~</h2>
+
+<p>The general sibling selector (~) selects all elements that are next siblings of a specified element.</p>
+
+<p>Paragraph 1.</p>
+
+<div class="k">
+  <p>Paragraph 2.</p>
+</div>
+
+<p>Paragraph 3.</p>
+<code>Some code.</code>
+<p>Paragraph 4.</p>
+
+<hr>
+<h2>Styling a link depending on state</h2>
+<section>
+<p><b><a href="default.asp" target="_blank">This is a link</a></b></p>
+<p><b>Note:</b> a:hover MUST come after a:link and a:visited in the CSS definition in order to be effective.</p>
+<p><b>Note:</b> a:active MUST come after a:hover in the CSS definition in order to be effective.</p>
+</section>
+<hr>
+<div class="dev">Hover over this div element to show the p element
+  <p class="a">Tada! Here I am!</p>
+</div>
+
+
+  <section>
+<h1>The :first-child Pseudo-class </h1>
+<p>This is some text.</p>
+<p>This is some text.</p>
+
+<div>
+  <p>This is some text.</p>
+  <p>This is some text.</p>
+</div>
+</section>
+<hr>
+<section>
+  <p class="i">You can use the ::first-line pseudo-element to
+     add a special effect to the first line of a text. Some 
+     more text. And even more, and more, and more, and more,
+      and more, and more, and more, and more, and more, and 
+      more, and more, and more.</p>
+
+  <p class="i">You can use the ::first-line pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+   <p class="i">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam autem reprehenderit pariatur placeat, facilis laborum maiores aspernatur sapiente obcaecati fugit quia illum saepe architecto reiciendis officiis nemo dolorum, consectetur recusandae.</p>
+</section>
+<hr>
+<section>
+<p class="m3">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</p>
+<p class="m3">You can use the ::first-letter pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+<p class="m3">You can use the ::first-letter pseudo-element to add a special effect to the first line of a text. Some more text. And even more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more, and more.</p>
+</section>
+<hr>
+<section>
+  <h1>This is a heading</h1>
+<p>The ::before pseudo-element inserts content before the content of an element.</p>
+
+<h1 class="f">This is a heading</h1>
+
+</section>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<ol>
+  <li>First</li>
+  <li>Second</li>
+  <li>Third</li>
+</ol>
+<hr>
+<section>
+
+  <h1>Image Transparency</h1>
+  <p>The opacity property is often used together with the :hover selector to change the opacity on mouse-over:</p>
+  <img src="pexels-photo-14071024.webp" alt="Forest" width="170" height="100">
+  <img src="free-photo-of-close-up-of-clear-water.jpeg" alt="Mountains" width="170" height="100">
+  <img src="pexels-photo-18999018.webp" alt="Italy" width="170" height="100">
+  
+
+</section>
+<hr>
+<section>
+  
+<h1>Transparent Box</h1>
+<p>When using the opacity property to add transparency to the background of an element, all of its child elements become transparent as well. This can make the text inside a fully transparent element hard to read:</p>
+
+<div class="first"><p>opacity 0.1</p></div>
+<div class="second"><p>opacity 0.3</p></div>
+<div class="third"><p>opacity 0.6</p></div>
+<div class="opacity"><p>opacity 1 (default)</p></div>
+</section>
+
+<hr>
+<section>
+  <div class="background">
+    <div class="transbox">
+      <p>This is some text that is placed in the transparent box.</p>
+    </div>
+  </div>
+  
+</section>
+<hr>
+<!-- <section>
+  <h2>Vertical Navigation Bar</h2>
+
+<ul>
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+</section> -->
+
+<hr>
+
+<section>
+  <div class="header">
+    <h2>Scroll Down</h2>
+    <p>Scroll down to see the sticky effect.</p>
+  </div>
+  
+  <ul class="sticky">
+    <li><a class="active" href="#home">Home sticky</a></li>
+    <li><a href="#news">News sticky</a></li>
+    <li><a href="#contact">Contact sticky</a></li>
+  </ul>
+  
+  <h3>Sticky Navigation Bar Example</h3>
+  <p>The navbar will <strong>stick</strong> to the top when you reach its scroll position.</p>
+  <p><strong>Note:</strong> Internet Explorer do not support sticky positioning and Safari requires a -webkit- prefix.</p>
+  <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+  <p>Some text to enable scrolling. Lorem ipsum dolor sit amet, illum definitiones no quo, maluisset concludaturque et eum, altera fabulas ut quo. Atqui causae gloriatur ius te, id agam omnis evertitur eum. Affert laboramus repudiandae nec et. Inciderint efficiantur his ad. Eum no molestiae voluptatibus.</p>
+</section>
+
+
+
+
+<style>
+
+
+
+
+
+/* Wenesday */
+
+body {
+  margin: 0;
+}
+
+.navbars{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 50%;
+  overflow: auto;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+
+
+div.background {
+  background: url(far.jfif) repeat;
+  border: 2px solid black;
+}
+
+div.transbox {
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity: 0.6;
+}
+
+div.transbox p {
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+
+
+.opacity {
+  background-color: #4CAF50;
+  padding: 10px;
+}
+
+div.first {
+  opacity: 0.1;
+}
+
+div.second {
+  opacity: 0.3;
+}
+
+div.third {
+  opacity: 0.6;
+}
+
+img {
+  opacity: 0.5;
+}
+
+img:hover {
+  opacity: 1.0;
+}
+
+
+
+/*tuesday*/
+::marker { 
+  color: blue;
+  font-size: 23px;
+}
+
+.f::before {
+  
+  content: url(pexels-photo-14071024.webp);
+ 
+}
+
+
+
+.m3::first-letter {
+  color: #ff0000;
+  font-size: xx-large;
+}
+
+
+.i::first-line {
+  color: #ff0000;
+  font-variant: small-caps;
+  word-spacing: 50px;
+}
+
+/*MONDAY*/
+p:first-child {
+  color: blue;
+} 
+
+.a {
+  display: none;
+  background-color: yellow;
+  padding: 20px;
+}
+
+.dev:hover p {
+  display: block;
+}
+
+section {
+  background-color: rgb(245, 242, 242);
+}
+
+
+.fr p {
+  background-color: yellow;
+}
+.red > p {
+  background-color: rgb(148, 80, 24);
+}
+
+.hr + p {
+  background-color: rgb(0, 4, 255);
+}
+.k ~ p {
+  background-color: rgb(255, 0, 21);
+}
+  /* unvisited link */
+/* a:link { 
+  color: red;
+}*/
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}
+   .center {
+  margin: auto;
+  width: 60%;
+  border: 3px solid #73AD21;
+  padding: 10px;
+}
+p{
+text-align:center;
+} 
+</style>
+</body>
+</html>

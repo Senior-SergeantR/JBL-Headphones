@@ -1,0 +1,2493 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+margin: 50px;
+width: calc(100% - 100px);
+/* left: 50px; */
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+
+/* body {margin: 0;}
+
+ul.sidenav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+ul.sidenav li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 25%;
+  padding: 1px 16px;
+  height: 900px;
+}
+
+@media screen and (max-width: 900px) {
+  ul.sidenav {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  
+  ul.sidenav li a {
+    float: left;
+    padding: 15px;
+  }
+  
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  ul.sidenav li a {
+    text-align: center;
+    float: none;
+  }
+}*/
+
+
+
+
+body {
+    background-color:white;
+  }
+  /* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #38444d;
+  } */
+  
+  li {
+    float: right;
+  }
+  
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+
+  body {
+    counter-reset: section;
+  }
+  
+  .se h2::before {
+    counter-increment: section;
+    content: "Section " counter(section) ": ";
+  }
+
+  body {
+    counter-reset: section;
+  }
+  
+   .tutorial h1 {
+    counter-reset: subsection;
+  }
+  
+  .tutorial h1::before {
+    counter-increment: section;
+    content: "Section " counter(section) ". ";
+  }
+  
+  .tutorial h2::before {
+    counter-increment: subsection;
+    content: counter(section) "." counter(subsection) " ";
+  }
+
+
+  .oder ol {
+    counter-reset: section;
+    list-style-type: none;
+  }
+  
+  .oder li::before {
+    counter-increment: section;
+    content: counters(section,".") " ";
+  }
+
+
+  /* Style the header */
+.header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* colum */
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 3px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 24%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+/* !important */
+#myid {
+  background-color: blue;
+}
+
+.myclass {
+  background-color: gray;
+}
+
+.para p {
+  background-color: red !important;
+}
+
+.button {
+  background-color: #8c8c8c !important; 
+  color: white !important;
+  padding: 5px !important;
+  border: 1px solid black !important; 
+}
+
+
+#myDivs a {
+  color: red;
+  background-color: yellow;  
+}
+/* calc() */
+#div1 {
+  position: absolute;
+  left: 50px;
+  width: calc(100% - 100px);
+  border: 1px solid black;
+  background-color: yellow;
+  padding: 5px;
+}
+/* max */
+#div2 {
+  background-color: yellow;
+  height: 100px;
+  width: max(50%, 300px);
+}
+/* min */
+#div3 {
+  background-color: yellow;
+  height: 100px;
+  width: min(50%, 300px);
+}
+/* Rounded corners */
+#rcorners1 {
+  border-radius: 15px 50px 30px 5px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners2 {
+  border-radius: 15px 50px 30px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners3 {
+  border-radius: 15px 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+
+#rcorners4 {
+  border-radius: 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+} 
+/* rounded corners */
+#rcorners5 {
+  border-radius: 50px / 15px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners6 {
+  border-radius: 15px / 50px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px; 
+}
+
+#rcorners7 {
+  border-radius: 50%;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;
+  height: 150px;
+} 
+/* background imagr */
+#example1 {
+  background-image: url(sunrise_74190-169.avif), url(mo.avif);
+  background-position: right bottom, left top;
+  background-repeat: no-repeat, repeat;
+  padding: 15px;
+}
+#example2 {
+  border: 1px solid black;
+  background: url(sunrise_74190-169.avif);
+  background-size: 100px 80px;
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+
+#example4 {
+  border: 1px solid black;
+  background: url(bouquet-flowers-with-white-background_1232-1088.avif);
+  background-repeat: no-repeat;
+  padding: 15px;
+}
+.diva {
+  border: 1px solid black;
+  height: 120px;
+  width: 150px;
+  background: url(bouquet-flowers-with-white-background_1232-1088.avif);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.divb {
+  border: 1px solid black;
+  height: 120px;
+  width: 150px;
+  background: url(sunrise_74190-169.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.divc {
+  border: 1px solid black;
+  height: 120px;
+  width: 150px;
+  background: url(mo.avif);
+  background-repeat: no-repeat;
+}
+/* body {
+  color: green;
+} */
+
+.div1 { 
+  box-shadow: 0px 0px 15px currentcolor;
+  border: 5px solid currentcolor;
+  padding: 15px;
+}
+
+#grad1 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(red, yellow);
+  box-shadow: 0px 0px 15px;
+  border: 5px solid black;
+  padding: 15px;
+}
+#grad2 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red , yellow);
+}
+
+#grad3 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to bottom right, red, yellow);
+}
+
+#grad4 {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+
+#grad5 {
+  height: 200px;
+  transform:translatey(-100px) ;
+  background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(47, 0, 255)); 
+  
+}
+
+#grada {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+}
+
+#gradb {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(45deg,red,yellow 7%,green 10%);
+}
+
+#gradc {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(190deg,red,yellow 7%,green 10%);
+}
+
+#gradd {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(90deg,red,yellow 7%,green 10%);
+}
+
+#grade {
+  height: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: repeating-linear-gradient(45deg, red 0px, red 10px, red 10px, yellow 10px, yellow 20px);
+}
+#grad6 {
+  height: 200px;
+  
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red, yellow, green);
+}
+#grad7 {
+  height: 150px;
+  
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: radial-gradient(red 5%, yellow 15%, green 60%);
+}
+
+#grad8 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red 45deg, yellow 90deg, green 210deg);
+}
+
+#grad9 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red, yellow, green, blue, black);
+  border-radius: 50%;
+}
+
+#grad10 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(red 0deg, red 90deg, yellow 90deg, yellow 180deg, green 180deg, green 270deg, blue 270deg);
+  border-radius: 50%;
+}
+
+#grad11 {
+  height: 200px;
+  width: 200px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: conic-gradient(from 90deg, red, yellow, green);
+  border-radius: 50%;
+}
+
+.form {
+  text-shadow: 2px 2px 5px rgb(44, 7, 7);
+}
+.h1 {
+  text-shadow: 0 0 3px rgb(20, 19, 19);
+  color: #fff;
+}
+
+.h2 {
+  text-shadow: 0 0 3px #FF0000, 0 0 5px #0000FF;
+}
+
+.h3 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+.h4 {
+  color: coral;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.boxshadow {
+  width: 300px;
+  height: 100px;
+  padding: 15px;
+  background-color: coral;
+  box-shadow: 10px 10px 5px lightblue;
+}
+div.polaroid {
+  width: 250px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+
+div.container {
+  padding: 10px;
+}
+
+div.card {
+  width: 250px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, .5);
+  text-align: center;
+}
+
+div.header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 40px;
+}
+
+div.containers {
+  padding: 10px;
+}
+p.test {
+  width: 11em; 
+  border: 1px solid #000000;
+  word-wrap: break-word;
+}
+
+p.test1 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: keep-all;
+}
+
+p.test2 {
+  width: 140px; 
+  border: 1px solid #000000;
+  word-break: break-all;
+}
+
+p.test3 {
+  writing-mode: horizontal-tb; 
+}
+
+span.test4 {
+  writing-mode: vertical-rl; 
+}
+
+p.test4 {
+  writing-mode: vertical-rl; 
+}
+
+div.trans {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: translate(50px,20px);
+}
+div.divs {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#my Div {
+  transform: rotate(45deg);
+}
+
+
+div.scale {
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scale(2,3);
+}
+div.i {
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scaleX(2);
+}
+div.y {
+  margin: 150px;
+  width: 200px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+  transform: scaleY(2);
+}
+.yx {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+div#mydiv {
+  transform: skew(20deg,10deg);
+}
+
+
+
+div.z {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#Div {
+  transform: rotateZ(30deg);
+  
+}
+div.transition {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s, height 4s;
+}
+
+div.transition:hover {
+  width: 300px;
+  height: 300px;
+}
+div.transition2 {
+  width: 100px;
+  height: 100px;
+  background: goldenrod;
+  transition: width 2s;
+}
+
+div.transition2:hover {
+  width: 300px;
+}
+
+
+div.id {
+  width: 100px;
+  height: 100px;
+  background: green;
+  transition: width 2s;
+}
+
+#div9 {transition-timing-function: linear;}
+#div10 {transition-timing-function: ease;}
+#div11 {transition-timing-function: ease-in;}
+#div12 {transition-timing-function: ease-out;}
+#div13 {transition-timing-function: ease-in-out;}
+
+div.id:hover {
+  width: 300px;
+}
+
+
+div.delay {
+  width: 100px;
+  height: 100px;
+  background: purple;
+  transition: width 3s;
+  transition-delay: 1s;
+}
+
+div.delay:hover {
+  width: 300px;
+}
+
+div.transform {
+  width: 100px;
+  height: 100px;
+  background: orangered;
+  transition: width 2s, height 2s, transform 2s;
+}
+
+div.transform:hover {
+  width: 300px;
+  height: 300px;
+  transform: rotate(180deg);
+}
+div.specified {
+  width: 100px;
+  height: 100px;
+  background: blue;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 1s;
+}
+
+div.specified:hover {
+  width: 300px;
+}
+
+
+
+
+div.css{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+@keyframes example {
+  from{background-color: red;}
+  to{background-color: yellow;}
+  
+}
+
+
+div.ani {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: examples;
+  animation-duration: 4s;
+}
+@keyframes examples {
+  0% {background-color: red;}
+  25% {background-color: yellow;}
+  50% {background-color: blue;}
+  75% {background-color: grey;}
+  100% {background-color: green;}
+}
+
+
+div.animation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: animation;
+  animation-duration: 4s;
+}
+@keyframes animation {
+  0% {background-color: red; left: 0px; top: 0px;}
+  25% {background-color: yellow; left: 200px; top: 0px;}
+  50% {background-color: blue; left: 200px; top: 200px;}
+  75% {background-color: grey;left: 0px; top: 200px;}
+  100% {background-color: green; left: 0px; top: 0px; }
+}
+
+
+div.del{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: animations;
+  animation-duration: 4s;
+  animation-delay: 2s;
+}
+@keyframes animations {
+  0% {background-color: red; left: 0px; top: 0px;}
+  25% {background-color: yellow; left: 200px; top: 0px;}
+  50% {background-color: blue; left: 200px; top: 200px;}
+  75% {background-color: grey;left: 0px; top: 200px;}
+  100% {background-color: green; left: 0px; top: 0px;}
+}
+
+
+div.neg{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: negative;
+  animation-duration: 4s;
+  animation-delay: -2s;
+}
+@keyframes negative {
+  0% {background-color: red; left: 0px; top: 0px;}
+  25% {background-color: yellow; left: 200px; top: 0px;}
+  50% {background-color: blue; left: 200px; top: 200px;}
+  75% {background-color: grey;left: 0px; top: 200px;}
+  100% {background-color: green; left: 0px; top: 0px;}
+}
+
+
+
+div.iteration {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: iteration;
+  animation-duration: 4s;
+  animation-iteration-count: 3;
+}
+@keyframes iteration{
+  0% {background-color: red; left: 0px; top: 0px;}
+  25%{ background-color: yellow; left: 200px; top: 200px;}
+  50%{background-color: blue; left: 200px; top: 200px;}
+  75% {background-color: grey;left: 0px; top: 200px;}
+  100% {background-color: green; left: 0px; top: 0px;}
+}
+
+div.infinite{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name:infinity;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes infinity{
+  0%{background-color: red;left: 0px; top: 0px;}
+  25%{background-color: brown;left: 200px; top: 0px;}
+  50%{background-color: blue;left: 200px; top: 200px;}
+  75%{background-color: green;left: 0px; top: 200px;}
+  100%{background-color: grey;left: 0px; top: 0px;}
+}
+div.reverse{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: reverses;
+  animation-duration: 4s;
+  animation-direction: reverse;
+}
+@keyframes reverses{
+  0%{background-color: red;left: 0px; top: 0px;}
+  25%{background-color: brown;left: 200px; top: 0px;}
+  50%{background-color: blue;left: 200px; top: 200px;}
+  75%{background-color: green;left: 0px; top: 200px;}
+  100%{background-color: grey;left: 0px; top: 0px;}
+}
+
+div.alternate {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: alternates;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+@keyframes alternates {
+  0%{background-color: red; left: 0px; top: 0px;}
+  25%{background-color: yellow; left: 200px; top: 0px;}
+  50%{ background-color: blue;left: 200px; top: 200px;}
+  75%{background-color: green;left: 0px; top: 200px;}
+  100%{background-color: grey;left: 0px; top: 0px;}
+}
+
+div.alternate-reverse {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: relative;
+  animation-name: alternates;
+  animation-duration: 4s;
+  animation-iteration-count: 2;
+  animation-direction: alternate-reverse;
+}
+@keyframes alternates {
+  0%{background-color: pink; left: 0px; top: 0px;}
+  25%{background-color: yellow; left: 200px; top: 0px;}
+  50%{ background-color: blue;left: 200px; top: 200px;}
+  75%{background-color: green;left: 0px; top: 200px;}
+  100%{background-color: grey;left: 0px; top: 0px;}
+}
+div.curve {
+  width: 100px;
+  height: 50px;
+  font-weight: bold;
+  position: relative;
+  animation: mymove 5s;
+  animation-fill-mode: forwards;
+}
+
+#div20{ background-color: #0000FF; animation-timing-function: linear;}
+#div21{ background-color: #73AD21; animation-timing-function: ease;}
+#div22 {background-color: #777; animation-timing-function: ease-in;}
+#div23 {background-color: red; animation-timing-function: ease-out;}
+#div24 {background-color:pink;  animation-timing-function: ease-in-out;}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 300px;}
+}
+
+
+
+/* body{
+  background-color: #8c8c8c;
+} */
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+.tooltips {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltips .tooltiptexts {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltips:hover .tooltiptexts {
+  visibility: visible;
+}
+.tool {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+
+.tool .tooltext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 70%;
+}
+
+.tool:hover .tooltext {
+  visibility: visible;
+}
+
+
+.tip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tip .tiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tip:hover .tiptext {
+  visibility: visible;
+}
+.tools {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tools .text {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tools:hover .text {
+  visibility: visible;
+}
+
+
+
+.tips {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tips .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+
+.tips .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+.tips:hover .tooltip {
+  visibility: visible;
+}
+
+.toolstip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.toolstip .tooltiptexts {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.toolstip .tooltiptexts::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.toolstip:hover .tooltiptexts {
+  visibility: visible;
+}
+.thumbnail {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 150px;
+}
+
+img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+.paris img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.polaroid {
+  width: 80%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+div.container {
+  text-align: center;
+  padding: 10px ;
+}
+.containe {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.imgleft { 
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
+
+
+.topright {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+.bottomleft {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+.bottomright {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+}
+
+
+img .no {
+  width: 33%;
+  height: auto;
+  float: left; 
+  max-width: 500px;
+}
+
+.blur {filter: blur(4px);}
+.brightness {filter: brightness(250%);}
+.contrast {filter: contrast(180%);}
+.grayscale {filter: grayscale(100%);}
+.huerotate {filter: hue-rotate(180deg);}
+.invert {filter: invert(100%);}
+.opacity {filter: opacity(50%);}
+.saturate {filter: saturate(7);}
+.sepia {filter: sepia(100%);}
+.shadow {filter: drop-shadow(8px 8px 10px green);}
+
+
+.contain {
+  position: relative;
+  width: 500px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.contain:hover .image {
+  opacity: 0.3;
+}
+
+.contain:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+/* overlay */
+.contains {
+  position: relative;
+  width: 50%;
+}
+
+.images {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 102%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.contains:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.texts {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+
+/* overlay bottom */
+.containar {
+  position: relative;
+  width: 50%;
+}
+
+.imaged {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlays {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 103%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.containar:hover .overlays {
+  height: 100%;
+}
+
+.texted {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* overlay left */
+.containarl {
+  position: relative;
+  width: 50%;
+}
+
+.imagel {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlayed {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.containarl:hover .overlayed{
+  width: 102%;
+}
+
+.textl {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+/* overlay right */
+.containerr {
+  position: relative;
+  width: 50%;
+}
+
+.imager {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlayr {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.containerr:hover .overlayr {
+  width: 102%;
+  left: 0;
+}
+
+.textr {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.pari:hover {
+  transform: scaleX(-1);
+}
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.1)} 
+  to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+.reflection{
+  -webkit-box-reflect: below 20px;
+}
+.tree {
+  -webkit-box-reflect: right;
+}
+.fresh {
+  -webkit-box-reflect: right 0px linear-gradient(to right, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+  padding-right: 20px;
+  border-radius: 30px;
+}
+.cover {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+}
+.contained {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+}
+.fill {
+  width: 200px;
+  height: 300px;
+  object-fit: fill;
+}
+.none {
+  width: 200px;
+  height: 300px;
+  object-fit: none;
+}
+.filled {object-fit: fill;}
+.con {object-fit: contain;}
+.covered {object-fit: cover;}
+.scale-down {object-fit: scale-down;}
+.noned {object-fit: none;}
+
+.position {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 80% 100%;
+}
+.object{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  object-position: 15% 100%;
+}
+.mask1 {
+   -webkit-mask-image: url(sunrise_74190-169.avif);background-image: url(sunrise_74190-169.avif);
+  -webkit-mask-repeat: no-repeat;
+   
+  border: 2px solid black; 
+}
+.mask2 {
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient(black, transparent);
+}
+
+
+p.mask{
+  font-size: 20px;
+  padding: 20px;
+  color: white;
+}
+.mask3 {
+  max-width: 600px;
+  height: 350px;
+  overflow-y: scroll;
+  background: url(paris.jpg) no-repeat;
+  -webkit-mask-image: linear-gradient(black, transparent);
+  mask-image: linear-gradient (black, transparent);
+}
+
+.mask4 {
+  -webkit-mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(circle, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+.mask5 {
+  -webkit-mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+  mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
+}
+
+.buttons{
+background-color: #04AA6D; /* Green */
+border: none;
+color: white;
+padding: 15px 32px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 16px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 10px;
+}
+
+.disabled {
+opacity: 0.6;
+cursor: not-allowed;
+
+}
+.con {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.con img {
+  width: 100%;
+  height: auto;
+}
+
+.con .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.con .btn:hover {
+  background-color: black;
+  color: white;
+}
+
+.button3 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button3 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button3 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button3:hover span {
+  padding-right: 25px;
+}
+
+.button3:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.button4 {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button4:hover {background-color: #3e8e41}
+
+.button4:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  
+}
+
+.button5 {
+  position: relative;
+  background-color: #04AA6D;
+  border: none;
+  font-size: 28px;
+  color: #FFFFFF;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.button5:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 1.5s
+}
+
+.button5:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+}
+
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+.pagination2 {
+  display: inline-block;
+}
+
+.pagination2 a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+.pagination2 a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination2 a:hover:not(.active) {background-color: #ddd;}
+
+.pagination2 a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination2 a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.pagination3 {
+  display: inline-block;
+}
+
+.pagination3 a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color .3s;
+  border: 1px solid #ddd;
+}
+
+.pagination3 a.active {
+  background-color: #4CAF50;
+  color: white;
+  border: 1px solid #4CAF50;
+}
+
+.pagination3 a:hover:not(.active) {background-color: #ddd;}
+
+ul.breadcrumb {
+  padding: 8px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+ul.breadcrumb li {display: inline;}
+
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+ul.breadcrumb li a {color: green;}
+
+.newspaper {
+  column-count: 3;
+  column-gap: 40px;
+  column-rule: 1px solid rgb(240, 14, 14);
+  column-width: 100px;
+}
+.newspaper1 {
+  column-count: 4;
+  column-gap: 40px;
+  column-rule: 1px solid rgb(52, 10, 240);
+  column-width: 100px;
+}
+.newspaper3 {
+  column-count: 4;
+  column-gap: 40px;
+  column-rule: 1px solid rgb(6, 64, 83);
+  column-width: 100px;
+}
+
+h2 {
+  column-span: all;
+}
+.vert {
+  border: 2px solid;
+  padding: 20px; 
+  width: 300px;
+  resize: vertical;
+  overflow: auto;
+}
+.hor {
+  border: 2px solid;
+  padding: 20px; 
+  width: 300px;
+  resize: horizontal;
+  overflow: auto;
+}
+.bothh {
+  border: 2px solid;
+  padding: 20px; 
+  width: 300px;
+  resize: both;
+  overflow: auto;
+}
+:root {
+  --blue:#ffffff; 
+  --white:  #1e90ff; 
+}
+
+body {
+  background-color: var(--blue);
+}
+
+.h2 {
+  border-bottom: 2px solid var(--blue);
+}
+
+.co {
+  color: var(--blue);
+  background-color: var(--white);
+  padding: 15px;
+}
+
+.butt {
+  --blue: #c52525;/* local variable will override global */
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
+  padding: 5px;
+ 
+}
+:root {
+  --blu: #1e90ff;
+  --whit: #ffffff; 
+}
+
+.container {
+  --fontsize: 25px;
+}
+
+
+/* body {
+  background-color: var(--blue);
+} */
+
+.v1 {
+  border-bottom: 2px solid var(--blu);
+}
+
+.va {
+  color: var(--blu);
+  background-color: var(--whit);
+  padding: 15px;
+  font-size: var(--fontsiz);
+}
+
+@media screen and (min-width: 450px) {
+  .va {
+    --fontsiz: 50px;
+  }
+}
+.box1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+}
+
+.box {
+  width: 300px;
+  height: 100px;  
+  padding: 50px;
+  border: 1px solid red;
+}
+.size1 {
+  width: 300px;
+  height: 100px;
+  border: 1px solid blue;
+  box-sizing: border-box;
+}
+
+.size {
+  width: 300px;
+  height: 100px;  
+  padding: 50px;
+  border: 1px solid red;
+  box-sizing: border-box;
+}
+ 
+
+input, textarea {
+  box-sizing: border-box;
+  width: 100%;
+}
+body {
+  background-color: tan;
+  color: black;
+}
+
+/* On screens that are 992px wide or less, the background color is blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+    color: white;
+  }
+}
+
+/* On screens that are 600px wide or less, the background color is olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+    color: white;
+  }
+}
+/* Style the top navigation bar */
+.topnav1 {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav1 a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav1 a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* On screens that are 600px wide or less, make the menu links stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .topnav1 a {
+    float: none;
+    width: 100%;
+  }
+}
+div.example {
+  background-color: yellow;
+  padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  div.example {
+    display: none;
+  }
+}
+
+
+.headers {
+  text-align: center;
+  padding: 32px;
+}
+
+.rows {
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.columns {
+  flex: 15%;
+  max-width: 20%;
+  padding: 0 4px;
+}
+
+.columns img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 1000px) {
+  .columns {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 1000px) {
+  .columns {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Header/logo Title */
+.headered {
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+/* Style the top navigation bar */
+.navba {
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navba a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navba a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.rowe {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.sides {
+  flex: 30%;
+  background-color: #a72121;
+  padding: 20px;
+}
+
+/* Main column */
+.mains {
+  flex: 70%;
+  background-color: #a72121;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navba {   
+    flex-direction: column;
+  }
+}
+body {
+  background-color: lightgreen;
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: tan;
+  }
+}
+@media screen and (max-width: 900px){
+  div.exampled {
+    font-size: 50px;
+    padding: 50px;
+    border: 8px solid black;
+    background: yellow;
+  }
+}
+.flex-container {
+  display: flex;
+  background-color: DodgerBlue;
+}
+
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
+
+.flex-containers {
+  display: flex;
+  flex-direction: column;
+  background-color: DodgerBlue;
+}
+
+.flex-containers > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-contained {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: DodgerBlue;
+}
+
+.flex-contained > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-containerd {
+  display: flex;
+ 
+  background-color: DodgerBlue;
+  cursor:pointer;
+}
+.flex-containerd:hover{
+  transition: 2s;
+  flex-direction: row-reverse;
+  background-color: red;
+  color:black;
+ 
+}
+.flex-containerd > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-contain {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: DodgerBlue;
+}
+
+.flex-contain > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-contains {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: DodgerBlue;
+  padding: 20px auto;
+}
+
+.flex-contains > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container2 {
+  display: flex;
+  height: 200px;
+  align-items: flex-start;
+  background-color: DodgerBlue;
+}
+
+.flex-container2 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container3 {
+  display: flex;
+  height: 400px;
+  align-items: flex-end;
+  background-color: DodgerBlue;
+}
+
+.flex-container3 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container4 {
+  display: flex;
+  height: 200px;
+  align-items: stretch;
+  background-color: DodgerBlue;
+}
+
+.flex-container4 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container5 {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: space-around;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-container5 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container6 {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: stretch;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-container6 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container7 {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: center;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-container7 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container8{
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-container8 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container9 {
+  display: flex;
+  height: 600px;
+  flex-wrap: wrap;
+  align-content: flex-end;
+  overflow: scroll;  
+  background-color: DodgerBlue;
+}
+
+.flex-container9 > div {
+  background-color: #f1f1f1;
+  width: 100px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+.flex-container10 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  background-color: DodgerBlue;
+}
+
+.flex-container10 > div {
+  background-color: #f1f1f1;
+  color: white;
+  width: 100px;
+  height: 100px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.head {
+  background-color: #9933cc;
+  color: #ffffff;
+  padding: 15px;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.menu li:hover {
+  background-color: #0099cc;
+}
+
+.aside {
+  background-color: #33b5e5;
+  padding: 15px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.footers {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
